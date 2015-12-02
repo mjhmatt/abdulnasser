@@ -10,6 +10,61 @@
 \*------------------------------------*/
 
 // Load any external files you have here
+require_once 'inc/meta.php';
+
+function abdul_init()
+{
+    register_post_type('Work',
+        array(
+            'hierarchical' => true,
+            'labels' => array(
+                'name' => 'Work',
+                'singular_name' => 'Work',
+                'menu_name' => 'Work',
+                'all_items' => 'Work',
+                'add_new' => 'Add New',
+                'add_new_item' => 'Add New Work',
+                'edit_item' => 'Edit Work',
+                'new_item' => 'New Work',
+                'view_item' => 'View Work',
+                'search_items' => 'Search Work',
+                'not_found' => 'No Work Found',
+                'not_found_in_trash' => 'No Work Found in Trash',
+                'parent_item_colon' => 'Parent Work'
+            ),
+            'menu_position' => 5,
+            'public' => true,
+            'supports' => array(
+                'title',
+                'editor',
+                'thumbnail',
+                'excerpt'
+            ),
+             'taxonomies' => array('post_tag')
+        )
+    );
+
+    register_taxonomy('work-category', 'work', array(
+        'hierarchical' => true,
+        'labels' => array(
+            'name' => 'Categories',
+            'singular_name' => 'Category',
+            'search_items' => 'Search Categories',
+            'popular_items' => null,
+            'all_items' => 'All Categories',
+            'edit_item' => 'Edit Category',
+            'update_item' => 'Update Category',
+            'add_new_item' => 'Add New Category',
+            'new_item_name' => 'New Category Name',
+            'separate_items_with_commas' => null,
+            'add_or_remove_items' => null,
+            'choose_from_most_used' => null,
+        ),
+        'show_admin_column' => true
+    ));
+
+}
+add_action('init', 'abdul_init');
 
 /*------------------------------------*\
 	Theme Support
