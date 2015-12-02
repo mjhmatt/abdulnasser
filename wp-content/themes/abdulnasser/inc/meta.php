@@ -1,0 +1,295 @@
+<?php
+function abdul_register_meta_boxes( $meta_boxes )
+{
+
+	$meta_boxes[] = array(
+			'title' => 'Join Team Url',
+			'pages' => array( 'page' ),
+			'priority' => 'high',
+			'include' => array(
+			'template' => array( 'template-team.php' ),
+		),
+			'fields' => array(
+				array(
+					'name' => 'Join the Team',
+					'desc' => 'Enter the url for joining the team.',
+					'id' => 'team_url',
+					'type' => 'text',
+				)
+			),
+			'custom'=>'wahey'
+		);
+
+	$meta_boxes[] = array(
+		'title' => 'Stats',
+		'pages' => array( 'page' ),
+		'include' => array(
+			'template' => array( 'template-home.php' ),
+		),
+		'priority' => 'high',
+		'fields' => array(
+			array(
+				'name' => 'Header Image Title',
+				'id' => 'header-image-title',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Stat 1 Title',
+				'id' => 'stat-title-one',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Stat 1 Description',
+				'id' => 'stat-desc-one',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Stat 2 Title',
+				'id' => 'stat-title-two',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Stat 2 Description',
+				'id' => 'stat-desc-two',
+				'type' => 'text',
+			),
+
+			array(
+				'name' => 'Stat 3 Title',
+				'id' => 'stat-title-three',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Stat 3 Description',
+				'id' => 'stat-desc-three',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Media Pack',
+				'id' => 'media-pack',
+				'type' => 'file_input',
+			),
+		),
+	);
+
+
+
+	$meta_boxes[] = array(
+		'title' => 'Work',
+		'pages' => array('work'),
+		'priority' => 'high',
+		'fields' => array(	
+			array(
+				'name' => 'Feature',
+				'id' => 'home_feature',
+				'type' => 'checkbox_list',
+				'options' => array('1' => 'Feature on Home Page', '2' => 'Feature on Work Page'),
+			),
+			array(
+				'name' => 'Video',
+				'desc' => 'Please paste YouTube or Vimeo link',
+				'id' => 'about_video',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Social Post',
+				'desc' => 'Please paste link to the post on social media if you want this to link out',
+				'id' => 'social_post',
+				'type' => 'text',
+			),
+		),
+	);
+
+	$meta_boxes[] = array(
+		'title' => 'Image 1',
+		'pages' => array('work'),
+		'priority' => 'high',
+		'fields' => array(	
+			array(
+				'name' => 'Image 1',
+				'id' => 'image_1',
+				'type' => 'image_advanced',
+				'max_file_uploads' => 1
+			),
+
+			array(
+				'name' => 'Image 1 Title',
+				'id' => 'image_1_title',
+				'type' => 'text',
+			),
+
+			array(
+				'name' => 'Image 1 Text',
+				'id' => 'image_1_text',
+				'type' => 'text',
+			),
+
+		)
+
+	);	
+
+	$meta_boxes[] = array(
+		'title' => 'Image 2',
+		'pages' => array('work'),
+		'priority' => 'high',
+		'fields' => array(	
+			array(
+				'name' => 'Image 2',
+				'id' => 'image_2',
+				'type' => 'image_advanced',
+				'max_file_uploads' => 1
+			),
+
+			array(
+				'name' => 'Image 2 Title',
+				'id' => 'image_2_title',
+				'type' => 'text',
+			),
+
+			array(
+				'name' => 'Image 2 Text',
+				'id' => 'image_2_text',
+				'type' => 'text',
+			),
+
+		)
+
+	);	
+
+	$meta_boxes[] = array(
+		'title' => 'Image 3',
+		'pages' => array('work'),
+		'priority' => 'high',
+		'fields' => array(	
+			array(
+				'name' => 'Image 3',
+				'id' => 'image_3',
+				'type' => 'image_advanced',
+				'max_file_uploads' => 1
+			),
+
+			array(
+				'name' => 'Image 3 Title',
+				'id' => 'image_3_title',
+				'type' => 'text',
+			),
+
+			array(
+				'name' => 'Image 3 Text',
+				'id' => 'image_3_text',
+				'type' => 'text',
+			),
+
+		)
+
+	);	
+
+	$meta_boxes[] = array(
+		'title' => 'Image 4',
+		'pages' => array('work'),
+		'priority' => 'high',
+		'fields' => array(	
+			array(
+				'name' => 'Image 4',
+				'id' => 'image_4',
+				'type' => 'image_advanced',
+				'max_file_uploads' => 1
+			),
+
+			array(
+				'name' => 'Image 4 Title',
+				'id' => 'image_4_title',
+				'type' => 'text',
+			),
+
+			array(
+				'name' => 'Image 4 Text',
+				'id' => 'image_4_text',
+				'type' => 'text',
+			),
+
+		)
+
+	);	
+
+	$meta_boxes[] = array(
+		'title' => 'Image 5',
+		'pages' => array('work'),
+		'priority' => 'high',
+		'fields' => array(	
+			array(
+				'name' => 'Image 5',
+				'id' => 'image_5',
+				'type' => 'image_advanced',
+				'max_file_uploads' => 1
+			),
+
+			array(
+				'name' => 'Image 5 Title',
+				'id' => 'image_5_title',
+				'type' => 'text',
+			),
+
+			array(
+				'name' => 'Image 5 Text',
+				'id' => 'image_5_text',
+				'type' => 'text',
+			),
+
+		)
+
+	);	
+
+
+
+	$meta_boxes[] = array(
+		'title' => 'Post Info',
+		'pages' => array('post'),
+		'priority' => 'high',
+		'fields' => array(
+			array(
+				'name' => 'News Subtitle',
+				'id' => 'case_subtitle',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Carousel Images',
+				'id' => 'caro_images',
+				'type' => 'image_advanced',
+				'max_file_uploads' => 0,
+			),
+			
+			array(
+				'name' => 'Area content below carousel',
+				'id' => 'area_below',
+				'type' => 'wysiwyg',
+			),
+			array(
+				'name' => 'Video',
+				'desc' => 'Please visit <a href="http://embedresponsively.com/" target="_blank">http://embedresponsively.com/</a> to generate reponsive embed code for your video. Copy and paste the embed code below.',
+				'id' => 'about_video',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'ISSUU Link',
+				'id' => 'issuu_link',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Quote',
+				'id' => 'work_quote',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'PDF Upload',
+				'id' => 'pdf_upload',
+				'type' => 'file',
+				'max_file_uploads' => 1,
+			),
+		),
+	);
+
+	return $meta_boxes;
+}
+
+add_filter( 'rwmb_meta_boxes', 'abdul_register_meta_boxes' );
