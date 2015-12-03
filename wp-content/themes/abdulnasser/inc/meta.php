@@ -101,10 +101,16 @@ function abdul_register_meta_boxes( $meta_boxes )
 	);
 
 	$meta_boxes[] = array(
-		'title' => 'Image 1',
+		'title' => 'Item 1',
 		'pages' => array('work'),
 		'priority' => 'high',
 		'fields' => array(	
+			array(
+				'name' => 'Video',
+				'desc' => 'Please paste YouTube or Vimeo link (note, this will show instead of this item`s image on the work details page.',
+				'id' => 'image_1_video',
+				'type' => 'text',
+			),
 			array(
 				'name' => 'Image 1',
 				'id' => 'image_1',
@@ -129,12 +135,18 @@ function abdul_register_meta_boxes( $meta_boxes )
 	);	
 
 	$meta_boxes[] = array(
-		'title' => 'Image 2',
+		'title' => 'Item 2',
 		'pages' => array('work'),
 		'priority' => 'high',
 		'fields' => array(	
 			array(
-				'name' => 'Image 2',
+				'name' => 'Video',
+				'desc' => 'Please paste YouTube or Vimeo link (note, this will show instead of this item`s image on the work details page.',
+				'id' => 'image_2_video',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Image',
 				'id' => 'image_2',
 				'type' => 'image_advanced',
 				'max_file_uploads' => 1
@@ -157,10 +169,16 @@ function abdul_register_meta_boxes( $meta_boxes )
 	);	
 
 	$meta_boxes[] = array(
-		'title' => 'Image 3',
+		'title' => 'Item 3',
 		'pages' => array('work'),
 		'priority' => 'high',
 		'fields' => array(	
+			array(
+				'name' => 'Video',
+				'desc' => 'Please paste YouTube or Vimeo link (note, this will show instead of this item`s image on the work details page.',
+				'id' => 'image_3_video',
+				'type' => 'text',
+			),
 			array(
 				'name' => 'Image 3',
 				'id' => 'image_3',
@@ -185,10 +203,16 @@ function abdul_register_meta_boxes( $meta_boxes )
 	);	
 
 	$meta_boxes[] = array(
-		'title' => 'Image 4',
+		'title' => 'Item 4',
 		'pages' => array('work'),
 		'priority' => 'high',
 		'fields' => array(	
+			array(
+				'name' => 'Video',
+				'desc' => 'Please paste YouTube or Vimeo link (note, this will show instead of this item`s image on the work details page.',
+				'id' => 'image_4_video',
+				'type' => 'text',
+			),
 			array(
 				'name' => 'Image 4',
 				'id' => 'image_4',
@@ -213,10 +237,16 @@ function abdul_register_meta_boxes( $meta_boxes )
 	);	
 
 	$meta_boxes[] = array(
-		'title' => 'Image 5',
+		'title' => 'Item 5',
 		'pages' => array('work'),
 		'priority' => 'high',
 		'fields' => array(	
+			array(
+				'name' => 'Video',
+				'desc' => 'Please paste YouTube or Vimeo link (note, this will show instead of this item`s image on the work details page.',
+				'id' => 'image_5_video',
+				'type' => 'text',
+			),
 			array(
 				'name' => 'Image 5',
 				'id' => 'image_5',
