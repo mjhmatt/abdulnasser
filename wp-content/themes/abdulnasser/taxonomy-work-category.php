@@ -6,12 +6,12 @@
 
 get_header();
 
+$term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
 
 $categories = get_terms('work-category');
-query_posts(array('post_type' => 'work', 'orderby' => 'date', 'order' => 'ASC', 'posts_per_page' => -1));
+query_posts(array('post_type' => 'work', 'orderby' => 'date', 'order' => 'ASC', 'posts_per_page' => -1,'work-category'=>$term->name));
 
 ?>
-
 <div class="work-container">
 	<?php if(count($categories) > 1) { ?>
 
