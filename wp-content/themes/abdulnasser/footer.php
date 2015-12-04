@@ -1,12 +1,10 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
 
-				<!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
-				</p>
-				<!-- /copyright -->
+				<a href="https://twitter.com/abdulnasserghar" target="_blank">Twitter</a>
+				<a href="https://www.facebook.com/AbdulnasserGharem" target="_blank">Facebook</a>
+				<a href="https://www.instagram.com/abdulnassergharem/" target="_blank">Instagram</a>
+				<a href="https://www.linkedin.com/in/abdulnasser-gharem-0131a212" target="_blank">LinkedIn</a>
 
 			</footer>
 			<!-- /footer -->
