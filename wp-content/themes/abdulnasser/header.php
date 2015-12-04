@@ -35,16 +35,16 @@
 					<div class="logo">
 						<a href="<?php echo home_url(); ?>">
 							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+							Abdulnasser Gharem
 						</a>
+					</div>
+
+					<div class="gharem-studio">
+
 					</div>
 					<!-- /logo -->
 
 					<!-- nav -->
-					<nav class="nav" role="navigation">
-						<?php html5blank_nav(); ?>
-					</nav>
-					<!-- /nav -->
 
 			</header>
 			<!-- /header -->

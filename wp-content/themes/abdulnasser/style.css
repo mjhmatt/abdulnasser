@@ -64,6 +64,7 @@ html {
 body {
 	font: 300 11px/1.4 'DINPro-CondBold', Helvetica, Arial, sans-serif;
 	background-color: rgb(242,242,242);
+	padding-top:120px;
 }
 
 img {
@@ -100,6 +101,42 @@ img {
 }
 
 
+/*------------------------------------*\
+	HEADER
+\*------------------------------------*/
+
+
+.header {
+	position:fixed;
+	background-color:transparent;
+	top:0px;
+	width:100%;
+}
+.header .logo {
+	float:left;
+	display:inline-block;
+}
+.header .logo a {
+	font:16px 'gothammedium';
+	text-decoration:none;
+	color:black;
+	background-color:white;
+	padding:20px 40px 0px 20px;
+	height:60px;
+	display:inline-block;
+}
+
+.header .gharem-studio {
+	float:right;
+	display:inline-block;
+	background-image:url('img/studios-01.svg');
+	background-size:21px;
+	background-position:center;
+	width:60px;
+	height:60px;
+	background-color:white;
+	background-repeat:no-repeat;
+}
 
 /*------------------------------------*\
 	WORK
