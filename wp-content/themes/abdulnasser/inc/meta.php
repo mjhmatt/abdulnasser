@@ -85,18 +85,18 @@ function abdul_register_meta_boxes( $meta_boxes )
 				'type' => 'checkbox_list',
 				'options' => array('1' => 'Feature on Home Page', '2' => 'Feature on Work Page'),
 			),
-			array(
-				'name' => 'Video',
-				'desc' => 'Please paste YouTube or Vimeo link',
-				'id' => 'about_video',
-				'type' => 'text',
-			),
-			array(
-				'name' => 'Social Post',
-				'desc' => 'Please paste link to the post on social media if you want this to link out',
-				'id' => 'social_post',
-				'type' => 'text',
-			),
+			// array(
+			// 	'name' => 'Video',
+			// 	'desc' => 'Please paste YouTube or Vimeo link',
+			// 	'id' => 'about_video',
+			// 	'type' => 'text',
+			// ),
+			// array(
+			// 	'name' => 'Social Post',
+			// 	'desc' => 'Please paste link to the post on social media if you want this to link out',
+			// 	'id' => 'social_post',
+			// 	'type' => 'text',
+			// ),
 		),
 	);
 

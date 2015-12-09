@@ -10,6 +10,7 @@
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54fec8cf5c7fe691" async="async"></script>
 		
 
 		<?php wp_head(); ?>
@@ -33,9 +34,14 @@
 
 					<!-- logo -->
 					<div class="logo">
-						<a href="<?php echo home_url(); ?>">
+						<a href="<?php echo home_url(); ?>" class="desktop">
 							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
 							Abdulnasser Gharem
+						</a>
+
+						<a href="<?php echo home_url(); ?>" class="mobile">
+							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+							AG
 						</a>
 					</div>
 

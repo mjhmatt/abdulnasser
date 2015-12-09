@@ -59,16 +59,35 @@
 
 html {
 	font-size: 62.5%;
+	background-color: rgb(242,242,242);
 }
 
 body {
-	font: 300 11px/1.4 'DINPro-CondBold', Helvetica, Arial, sans-serif;
+	font: 300 11px/1.4 'gothammedium', Helvetica, Arial, sans-serif;
 	background-color: rgb(242,242,242);
 	padding-top:120px;
 }
 
 img {
-	max-width: 100%;
+	/* max-width: 100%; */
+}
+
+.bx-wrapper {
+	background:transparent;
+	border:none;
+	box-shadow:none;
+}
+
+
+.bx-wrapper .bx-pager {
+	background:white;
+}
+.no-display {
+	display:none;
+}
+
+.mobile {
+	display:none;
 }
 
 .clear:after {
@@ -79,7 +98,7 @@ img {
 	visibility: hidden;
 }
 	
-.clear {
+.cat-mobile.clear.mobile {
 	*zoom: 1;
 }
 
@@ -111,10 +130,13 @@ img {
 	background-color:transparent;
 	top:0px;
 	width:100%;
+	z-index:110;
+	pointer-events: none;
 }
 .header .logo {
 	float:left;
 	display:inline-block;
+	width:auto;
 }
 .header .logo a {
 	font:16px 'gothammedium';
@@ -124,6 +146,10 @@ img {
 	padding:20px 40px 0px 20px;
 	height:60px;
 	display:inline-block;
+}
+
+.header .logo a.mobile {
+	display:none;
 }
 
 .header .gharem-studio {
@@ -136,6 +162,7 @@ img {
 	height:60px;
 	background-color:white;
 	background-repeat:no-repeat;
+	display:block;
 }
 
 /*------------------------------------*\
@@ -189,6 +216,96 @@ img {
 	border-bottom:2px solid black;
 }
 
+.work-container .work-title.mobile {
+	display:none;
+}
+
+/*------------------------------------*\
+	WORK INSIDE
+\*------------------------------------*/
+
+.caro-holder {
+	/*height:100%;*/
+}
+
+.caro-holder li{
+	text-align:center;
+}
+
+.caro-holder .caro-contain {
+	display:inline-block;
+	position: relative;
+}
+.caro-holder li img, .caro-holder li iframe {
+	text-align:center;
+	margin:0 auto;
+	display:inline-block;
+	/* max-width: 80%; */
+}
+
+.caro-holder .caro-contain .text-content {
+	position:absolute;
+	bottom:0px;
+	left: 0px;
+	text-align: left;
+	background-color: white;
+	padding: 10px 15px;
+}
+
+.caro-holder .caro-contain .text-content .title {
+	font:34px 'gothambold';
+}
+
+.caro-holder .caro-contain .text-content .content {
+	font-size:13px;
+}
+
+.caro-holder .caro-contain .text-content .cross{
+	font-size:13px;
+	cursor:pointer;
+}
+
+.caro-holder .social-contain {
+	position: absolute;
+	display:inline-block;
+	bottom: 0;
+	right: -75px;
+}
+span.plus-tag{
+	background-image: url('img/plus79.svg');
+	background-size: 39px;
+	width: 70px;
+	height: 70px!important;
+	background-color: white;
+	z-index: 9999;
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	bottom: 10px;
+	cursor: pointer;
+}
+
+div.sharer {
+    background-image: url('img/sharer-01.svg');
+    background-size: 42px;
+    width: 70px;
+    height: 70px!important;
+    background-color: white;
+    z-index: 9999;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div.sharer a.at300b .at4-icon{
+	background-color:transparent!important;
+	width:70px;
+	height:70px;
+	display:inline-block;
+	color:transparent!important;
+}
+
 /*  SECTIONS  */
 .section {
 	clear: both;
@@ -196,6 +313,9 @@ img {
 	margin: 0px;
 }
 
+[aria-hidden=true] {
+	visibility:hidden;
+}
 /*  COLUMN SETUP  */
 .col {
 	display: block;
@@ -257,11 +377,195 @@ img {
   	width: 8.333%;
 }
 
-/*  GO FULL WIDTH BELOW 480 PIXELS */
-@media only screen and (max-width: 480px) {
-	.col {  margin: 1% 0 1% 0%; }
-    
-    .span_1_of_12, .span_2_of_12, .span_3_of_12, .span_4_of_12, .span_5_of_12, .span_6_of_12, .span_7_of_12, .span_8_of_12, .span_9_of_12, .span_10_of_12, .span_11_of_12, .span_12_of_12 {
-	width: 100%; 
+.work-container .work-image {
+	width:25%;
+}
+
+@media only screen and (max-width: 880px) {
+	.work-container .work-image {
+		width:33.3%;
+		padding:11% 0%;
 	}
+
+	.caro-holder .social-contain {
+	    position: absolute;
+	    display: inline-block;
+	    top: -75px;
+	    left: 0px;
+	    right:auto;
+	    bottom:auto;
+	}
+
+	span.plus-tag {
+	    background-image: url('img/plus79.svg');
+	    background-size: 39px;
+	    width: 70px;
+	    height: 70px!important;
+	    background-color: white;
+	    z-index: 9999;
+	    display: inline-block;
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    position: relative;
+	    bottom: 0px;
+	    cursor: pointer;
+	    margin-right: 5px;
+	}
+
+	.bx-viewport {
+		    overflow: visible!important;
+	}
+
+
+	div.sharer {
+	    background-image: url('img/sharer-01.svg');
+	    background-size: 42px;
+	    width: 70px;
+	    height: 70px!important;
+	    background-color: white;
+	    z-index: 9999;
+	    display: inline-block;
+	    background-repeat: no-repeat;
+	    background-position: center;
+	}
+
+	.caro-holder {
+	    padding-top: 90px;
+	}
+
+	.caro-contain .caro-el {
+		width:100%;
+	}
+
+	.caro-holder .caro-contain {
+	    display: inline-block;
+	    position: relative;
+	    width: %;
+	}
+
+}
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 680px) {
+    
+    .span-1-of-12, .span-2-of-12, .span-3-of-12, .span-4-of-12, .span-5-of-12, .span-6-of-12, .span-7-of-12, .span-8-of-12, .span-9-of-12, .span-10-of-12, .span-11-of-12, .span-12-of-12 {
+		width: 100%; 
+	}
+
+	.header .logo {
+		width:10%;
+		overflow:hidden;
+	}
+
+	body {
+		padding-top:20px;
+	}
+
+	.work-container .work-image {
+		width:50%;
+		padding:16.5% 0%;
+	}
+
+	.header .logo a.desktop {
+		display:none;
+	}
+
+	.header .logo {
+		width:50px;
+		pointer-events: all;
+	}
+
+	.header .logo a.mobile {
+		display:inline-block;
+		font-size:26px;
+		width: 50px;
+    	padding: 12px 5px;
+	}
+
+	.cat-container.desktop {
+		display:none;
+	}
+
+	.work-container .work-title.mobile {
+		display:block;
+		font-size:15px;
+		text-align:center;
+		padding-bottom:20px;
+	}
+
+	.cat-mobile {
+		position:fixed;
+		top:0px;
+		height:60px;
+		background-color:black;
+		color:white;
+		width: 100%;
+		text-align: center;
+		z-index: 100;
+		display:block;
+	}
+
+	.cat-mobile .plus-minus {
+		font:25px 'gothambookregular';
+	}
+
+	.cat-mobile {
+		font:25px 'gothammedium';
+		padding-top: 13px;
+		pointer-events: all;
+	}
+
+	.cat-mobile span {
+		cursor:pointer;
+	}
+
+	.cat-sidebar {
+		position:fixed;
+		top:0px;
+		right:0px;
+		height:100%;
+		width: 82%;
+		background-color: black;
+		z-index: 110;
+		color: white;
+		text-align:center;
+		display:block;
+	}
+
+	.cat-sidebar.no-display {
+		display:none;
+	}
+	.cat-sidebar .plus-minus {
+		float:left;
+		font: 47px 'gothambookregular';
+		position: relative;
+		left: 30px;
+		top: -13px;
+		width: 0px;
+	}
+
+	.cat-sidebar .cat-item {
+		font-size:25px;
+	}
+
+	.cat-sidebar .cat-container {
+		padding-top:20px;
+		cursor:pointer;
+	}
+
+	.caro-contain .caro-el {
+		width:100%;
+	}
+
+	.caro-holder {
+	    padding-top: 140px;
+	}
+
+	.caro-holder .caro-contain {
+	    display: inline-block;
+	    position: relative;
+	    width: 100%;
+	}
+
+	
+	
 }
