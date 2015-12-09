@@ -23,6 +23,10 @@
 		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
 		ga('send', 'pageview');
 		</script>
+		<!-- Go to www.addthis.com/dashboard to customize your tools -->
+		
+
+
 
 	</body>
 </html>
