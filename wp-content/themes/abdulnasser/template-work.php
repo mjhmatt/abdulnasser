@@ -47,6 +47,7 @@ query_posts(array('post_type' => 'work', 'orderby' => 'date', 'order' => 'ASC', 
 	</div>
 
 	<div class="clear packery">
+		
 		<?php
 		while(have_posts()) {		
 			the_post();
@@ -59,74 +60,6 @@ query_posts(array('post_type' => 'work', 'orderby' => 'date', 'order' => 'ASC', 
 			</a>
 
 		<?php } ?>
-
-
-		<?php
-		while(have_posts()) {		
-			the_post();
-			$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>
-
-			
-			<a class="work-image col span-3-of-12" style="background-image:url('<?php echo $url;?>');">
-
-
-			</a>
-
-		<?php } ?>
-
-		<?php
-		while(have_posts()) {		
-			the_post();
-			$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>
-
-			
-			<a class="work-image col span-3-of-12" style="background-image:url('<?php echo $url;?>');">
-
-
-			</a>
-
-		<?php } ?>
-
-		<?php
-		while(have_posts()) {		
-			the_post();
-			$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>
-
-			
-			<a class="work-image col span-3-of-12" style="background-image:url('<?php echo $url;?>');">
-
-
-			</a>
-
-		<?php } ?>
-
-		<?php
-		while(have_posts()) {		
-			the_post();
-			$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>
-
-			
-			<a class="work-image col span-3-of-12" style="background-image:url('<?php echo $url;?>');">
-
-
-			</a>
-
-		<?php } ?>
-
-		<?php
-		while(have_posts()) {		
-			the_post();
-			$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>
-
-			
-			<a class="work-image col span-3-of-12" style="background-image:url('<?php echo $url;?>');">
-
-
-			</a>
-
-		<?php } ?>
-
-
 
 	</div>
 </div>
