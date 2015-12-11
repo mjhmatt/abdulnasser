@@ -80,7 +80,7 @@ img {
 
 
 .bx-wrapper .bx-pager {
-	background:white;
+	background:transparent;
 }
 .no-display {
 	display:none;
@@ -146,6 +146,7 @@ img {
 	padding:20px 40px 0px 20px;
 	height:60px;
 	display:inline-block;
+	pointer-events:all;
 }
 
 .header .logo a.mobile {
@@ -197,8 +198,8 @@ img {
 }
 
 .work-container {
-	padding-top:85px;
-}
+	padding:85px 0px;
+} 
 .work-container .cat-container {
 	padding-left:2.34%;
 	padding-bottom:20px;
@@ -226,6 +227,7 @@ img {
 
 .caro-holder {
 	/*height:100%;*/
+	padding-bottom:85px;
 }
 
 .caro-holder li{
