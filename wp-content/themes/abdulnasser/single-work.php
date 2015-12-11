@@ -21,7 +21,7 @@
 
 						<div class="social-contain"><span class="plus-tag"></span><div class="sharer"><a class="addthis_button_more"></a></div></div>
 						<div class="text-content no-display clear">
-							<span class="cross right">x</span>
+							<span class="cross right"></span>
 							<p class="title"><?php echo rwmb_meta('image_'.$i.'_title'); ?></p>
 							<p class="content"><?php echo rwmb_meta('image_'.$i.'_text'); ?></p>
 

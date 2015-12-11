@@ -66,6 +66,7 @@ body {
 	font: 300 11px/1.4 'gothammedium', Helvetica, Arial, sans-serif;
 	background-color: rgb(242,242,242);
 	padding-top:120px;
+	opacity:0;
 }
 
 img {
@@ -221,6 +222,20 @@ img {
 	display:none;
 }
 
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: white;
+    text-indent: -9999px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    outline: 0;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+}
+
+
 /*------------------------------------*\
 	WORK INSIDE
 \*------------------------------------*/
@@ -251,20 +266,41 @@ img {
 	left: 0px;
 	text-align: left;
 	background-color: white;
-	padding: 10px 15px;
+	padding: 10px 15px 70px;
+	width: 70%;
 }
 
 .caro-holder .caro-contain .text-content .title {
 	font:34px 'gothambold';
+	letter-spacing:4px;
+	width:60%;
 }
 
 .caro-holder .caro-contain .text-content .content {
 	font-size:13px;
+	letter-spacing:2px;
 }
 
 .caro-holder .caro-contain .text-content .cross{
-	font-size:13px;
-	cursor:pointer;
+	background-image: url('img/plus79.svg');
+    background-size: 39px;
+    width: 70px;
+    height: 70px!important;
+    background-color: white;
+    z-index: 9999;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    bottom: 16px;
+    cursor: pointer;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    right: -13px;
+    background-color: transparent;
 }
 
 .caro-holder .social-contain {

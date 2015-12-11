@@ -60,7 +60,7 @@
 		$('.caro-holder ul').bxSlider({
 			auto: false,
 			autoHover: true,
-			adaptiveHeight: true,
+			adaptiveHeight: false,
 			video: true,
 			onSliderLoad: function(){
 				// AddThis
@@ -96,6 +96,11 @@
 		
 	});
 
-
+	$(window).load(function() {
+	 // executes when complete page is fully loaded, including all frames, objects and images
+	 $( "body" ).fadeTo( "fast" , 1, function() {
+	    // Animation complete.
+	  });
+	});
 	
 })(jQuery, this);
