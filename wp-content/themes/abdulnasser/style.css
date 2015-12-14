@@ -243,6 +243,7 @@ img {
 .caro-holder {
 	/*height:100%;*/
 	padding-bottom:85px;
+	overflow-x:hidden;
 }
 
 .caro-holder li{
@@ -252,6 +253,8 @@ img {
 .caro-holder .caro-contain {
 	display:inline-block;
 	position: relative;
+	max-width: 80%;
+	margin: 0 auto;
 }
 .caro-holder li img, .caro-holder li iframe {
 	text-align:center;
@@ -272,13 +275,13 @@ img {
 
 .caro-holder .caro-contain .text-content .title {
 	font:34px 'gothambold';
-	letter-spacing:4px;
+	letter-spacing: 2px;
 	width:60%;
 }
 
 .caro-holder .caro-contain .text-content .content {
 	font-size:13px;
-	letter-spacing:2px;
+	letter-spacing: 1px;
 }
 
 .caro-holder .caro-contain .text-content .cross{
@@ -419,10 +422,39 @@ div.sharer a.at300b .at4-icon{
 	width:25%;
 }
 
+.caro-contain .caro-el {
+	/*width:100%;*/
+	min-height:400px;
+}
+
+
+/*.bx-wrapper .bx-pager {
+    text-align: center;
+    font-size: .85em;
+    font-family: Arial;
+    font-weight: bold;
+    color: #666;
+    padding-top: 20px;
+    position: fixed;
+    bottom: 70px;
+}	*/
+
 @media only screen and (max-width: 880px) {
 	.work-container .work-image {
 		width:33.3%;
 		padding:11% 0%;
+	}
+
+	[aria-hidden=true] {
+	     visibility: visible; 
+	}
+
+
+	.caro-holder .caro-contain {
+	    display: inline-block;
+	    position: relative;
+	    max-width: 100%;
+	    margin: 0 auto;
 	}
 
 	.caro-holder .social-contain {
@@ -472,7 +504,9 @@ div.sharer a.at300b .at4-icon{
 	}
 
 	.caro-contain .caro-el {
-		width:100%;
+		width:auto;
+		max-height:none!important;
+		min-height:none!important;
 	}
 
 	.caro-holder .caro-contain {

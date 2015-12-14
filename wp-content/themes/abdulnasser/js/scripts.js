@@ -59,20 +59,30 @@
 
 		$('.caro-holder ul').bxSlider({
 			auto: false,
+			mode: 'horizontal',
 			autoHover: true,
-			adaptiveHeight: false,
+			adaptiveHeight: true,
+			adaptiveHeightSpeed: 0,
+			infiniteLoop: false,
 			video: true,
+			useCSS: false,
 			onSliderLoad: function(){
 				// AddThis
 				addthis.toolbox('.sharer');
 				setTimeout(function(){
 					$('.caro-holder .caro-contain').each(function(){
-						
+					 $('.caro-el').css('max-height',$(window).height()-400);
 					});
 				},100);
+			},
+			onSlideAfter: function(){
+				$('.caro-el').css('max-height',$(window).height()-400);
 			}
 
+		});
 
+		$(window).on('resize', function(){
+		    $('.caro-el').css('max-height',$(window).height()-400);
 		});
 
 		$('.cat-mobile').click(function(){
