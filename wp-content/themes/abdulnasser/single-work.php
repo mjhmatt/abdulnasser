@@ -7,7 +7,7 @@
 			<?php $file = rwmb_meta('image_'.$i,'type=file'); ?>
 			<?php $file = array_shift($file); ?>	
 				<li>
-					<div class="caro-contain" style="<?php echo rwmb_meta('image_'.$i.'_video') ? 'display:block;' : '';?>">
+					<div class="caro-contain" style="<?php echo rwmb_meta('image_'.$i.'_video') ? 'display:block; width:80%;' : '';?>">
 
 						<?php if (rwmb_meta('image_'.$i.'_video')){ ?>
 

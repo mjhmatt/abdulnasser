@@ -427,6 +427,13 @@ div.sharer a.at300b .at4-icon{
 	min-height:550px;
 }
 
+.fluid-width-video-wrapper {
+	width:100%!important;
+	margin:0 auto;
+	padding-top: 20%!important;
+    padding-bottom: 20%!important;
+}
+
 
 /*.bx-wrapper .bx-pager {
     text-align: center;
