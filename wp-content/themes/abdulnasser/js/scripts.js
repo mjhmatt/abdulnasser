@@ -59,16 +59,15 @@
 
 		$('.caro-holder ul').bxSlider({
 			auto: false,
-			mode: 'horizontal',
+			mode: 'fade',
 			autoHover: true,
 			adaptiveHeight: true,
 			adaptiveHeightSpeed: 0,
 			infiniteLoop: false,
 			video: true,
-			useCSS: false,
+			useCSS: true,
 			onSliderLoad: function(){
 				// AddThis
-				addthis.toolbox('.sharer');
 				setTimeout(function(){
 					$('.caro-holder .caro-contain').each(function(){
 					 $('.caro-el').css('max-height',$(window).height()-400);

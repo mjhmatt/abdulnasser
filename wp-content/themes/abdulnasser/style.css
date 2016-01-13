@@ -253,7 +253,7 @@ img {
 .caro-holder .caro-contain {
 	display:inline-block;
 	position: relative;
-	max-width: 80%;
+	max-width: 100%;
 	margin: 0 auto;
 }
 .caro-holder li img, .caro-holder li iframe {
@@ -424,7 +424,7 @@ div.sharer a.at300b .at4-icon{
 
 .caro-contain .caro-el {
 	/*width:100%;*/
-	min-height:550px;
+	/*min-height:550px;*/
 }
 
 .fluid-width-video-wrapper {
