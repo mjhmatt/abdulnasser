@@ -3,7 +3,7 @@
 	<main role="main">
 		<!-- section -->
 
-	<?php echo do_shortcode('[metaslider id=175]');?>
+	<?php echo do_shortcode('[metaslider id=218]');?>
 
 		<!-- /section -->
 	</main>
