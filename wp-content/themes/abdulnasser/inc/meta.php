@@ -270,6 +270,211 @@ function abdul_register_meta_boxes( $meta_boxes )
 
 	);	
 
+	$meta_boxes[] = array(
+		'title' => 'Item 6',
+		'pages' => array('work'),
+		'priority' => 'high',
+		'fields' => array(	
+			array(
+				'name' => 'Video',
+				'desc' => 'Please paste YouTube or Vimeo link (note, this will show instead of this item`s image on the work details page.',
+				'id' => 'image_6_video',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Image 6',
+				'id' => 'image_6',
+				'type' => 'image_advanced',
+				'max_file_uploads' => 1
+			),
+
+			array(
+				'name' => 'Image 6 Title',
+				'id' => 'image_6_title',
+				'type' => 'text',
+			),
+
+			array(
+				'name' => 'Image 6 Text',
+				'id' => 'image_6_text',
+				'type' => 'text',
+			),
+
+		)
+
+	);	
+
+
+	$meta_boxes[] = array(
+		'title' => 'Item 7',
+		'pages' => array('work'),
+		'priority' => 'high',
+		'fields' => array(	
+			array(
+				'name' => 'Video',
+				'desc' => 'Please paste YouTube or Vimeo link (note, this will show instead of this item`s image on the work details page.',
+				'id' => 'image_7_video',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Image 7',
+				'id' => 'image_7',
+				'type' => 'image_advanced',
+				'max_file_uploads' => 1
+			),
+
+			array(
+				'name' => 'Image 7 Title',
+				'id' => 'image_7_title',
+				'type' => 'text',
+			),
+
+			array(
+				'name' => 'Image 7 Text',
+				'id' => 'image_7_text',
+				'type' => 'text',
+			),
+
+		)
+
+	);	
+
+
+	$meta_boxes[] = array(
+		'title' => 'Item 7',
+		'pages' => array('work'),
+		'priority' => 'high',
+		'fields' => array(	
+			array(
+				'name' => 'Video',
+				'desc' => 'Please paste YouTube or Vimeo link (note, this will show instead of this item`s image on the work details page.',
+				'id' => 'image_7_video',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Image 7',
+				'id' => 'image_7',
+				'type' => 'image_advanced',
+				'max_file_uploads' => 1
+			),
+
+			array(
+				'name' => 'Image 7 Title',
+				'id' => 'image_7_title',
+				'type' => 'text',
+			),
+
+			array(
+				'name' => 'Image 7 Text',
+				'id' => 'image_7_text',
+				'type' => 'text',
+			),
+
+		)
+
+	);	
+
+	$meta_boxes[] = array(
+		'title' => 'Item 8',
+		'pages' => array('work'),
+		'priority' => 'high',
+		'fields' => array(	
+			array(
+				'name' => 'Video',
+				'desc' => 'Please paste YouTube or Vimeo link (note, this will show instead of this item`s image on the work details page.',
+				'id' => 'image_8_video',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Image 8',
+				'id' => 'image_8',
+				'type' => 'image_advanced',
+				'max_file_uploads' => 1
+			),
+
+			array(
+				'name' => 'Image 8 Title',
+				'id' => 'image_8_title',
+				'type' => 'text',
+			),
+
+			array(
+				'name' => 'Image 8 Text',
+				'id' => 'image_8_text',
+				'type' => 'text',
+			),
+
+		)
+
+	);	
+
+	$meta_boxes[] = array(
+		'title' => 'Item 9',
+		'pages' => array('work'),
+		'priority' => 'high',
+		'fields' => array(	
+			array(
+				'name' => 'Video',
+				'desc' => 'Please paste YouTube or Vimeo link (note, this will show instead of this item`s image on the work details page.',
+				'id' => 'image_9_video',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Image 9',
+				'id' => 'image_9',
+				'type' => 'image_advanced',
+				'max_file_uploads' => 1
+			),
+
+			array(
+				'name' => 'Image 9 Title',
+				'id' => 'image_9_title',
+				'type' => 'text',
+			),
+
+			array(
+				'name' => 'Image 9 Text',
+				'id' => 'image_9_text',
+				'type' => 'text',
+			),
+
+		)
+
+	);	
+
+	$meta_boxes[] = array(
+		'title' => 'Item 10',
+		'pages' => array('work'),
+		'priority' => 'high',
+		'fields' => array(	
+			array(
+				'name' => 'Video',
+				'desc' => 'Please paste YouTube or Vimeo link (note, this will show instead of this item`s image on the work details page.',
+				'id' => 'image_10_video',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Image 10',
+				'id' => 'image_10',
+				'type' => 'image_advanced',
+				'max_file_uploads' => 1
+			),
+
+			array(
+				'name' => 'Image 10 Title',
+				'id' => 'image_10_title',
+				'type' => 'text',
+			),
+
+			array(
+				'name' => 'Image 10 Text',
+				'id' => 'image_10_text',
+				'type' => 'text',
+			),
+
+		)
+
+	);	
 
 
 	$meta_boxes[] = array(

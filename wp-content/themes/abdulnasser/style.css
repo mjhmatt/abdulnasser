@@ -150,6 +150,16 @@ img {
 	pointer-events:all;
 }
 
+.header a.work {
+	margin-left:-10px;
+
+}
+
+body.work .header a.work,
+body.single-work .header a.work {
+	text-decoration:underline;
+}
+
 .header .logo a.mobile {
 	display:none;
 }
@@ -164,7 +174,7 @@ img {
 	height:60px;
 	background-color:white;
 	background-repeat:no-repeat;
-	display:block;
+	display:none;
 }
 
 /*------------------------------------*\
@@ -185,6 +195,17 @@ img {
 	color:black;
 	text-decoration:none;
 	margin-right:20px;
+}
+
+/*------------------------------------*\
+	HOME
+\*------------------------------------*/
+.work-container.home-container {
+	padding:0;
+}
+
+body.home {
+	padding-top:0;
 }
 
 /*------------------------------------*\
@@ -239,6 +260,26 @@ img {
 /*------------------------------------*\
 	WORK INSIDE
 \*------------------------------------*/
+
+.next-prev {
+	width:100%;
+	margin:0 auto;
+	text-align:center;
+	padding:20px 0px;
+
+}
+
+.next-prev a {
+	font:16px 'gothammedium';
+	color:black;
+	margin:0px 3.3% 0 0;
+	text-decoration:none;
+}
+
+.next-prev a:hover {
+	text-decoration: underline;
+}
+
 
 .caro-holder {
 	/*height:100%;*/
@@ -339,12 +380,16 @@ div.sharer {
     background-position: center;
 }
 
-div.sharer a.at300b .at4-icon{
+div.sharer a{
 	background-color:transparent!important;
 	width:70px;
 	height:70px;
 	display:inline-block;
 	color:transparent!important;
+}
+
+div.sharer a span {
+	visibility:hidden;
 }
 
 /*  SECTIONS  */
@@ -504,6 +549,8 @@ div.sharer a.at300b .at4-icon{
 	    display: inline-block;
 	    background-repeat: no-repeat;
 	    background-position: center;
+	    top: 0px;
+	    position: Absolute;
 	}
 
 	.caro-holder {
@@ -548,6 +595,10 @@ div.sharer a.at300b .at4-icon{
 		display:none;
 	}
 
+	.header a.work {
+		display:none;
+	}
+	
 	.header .logo {
 		width:50px;
 		pointer-events: all;
@@ -569,6 +620,10 @@ div.sharer a.at300b .at4-icon{
 		font-size:15px;
 		text-align:center;
 		padding-bottom:20px;
+	}
+
+	.home .work-container .work-title.mobile {
+		display:none;
 	}
 
 	.cat-mobile {
