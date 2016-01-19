@@ -25,7 +25,7 @@
 
 	</head>
 	<body <?php body_class(); ?>>
-
+	<div class="burger-menu"><a class="work" href="/work">Work</a></div>
 		<!-- wrapper -->
 		<div class="wrapper">
 
@@ -45,7 +45,6 @@
 							AG
 						</a>
 					</div>
-
 					<div class="gharem-studio">
 
 					</div>
@@ -54,4 +53,5 @@
 					<!-- nav -->
 
 			</header>
+			<div class="burger-button"></div>
 			<!-- /header -->

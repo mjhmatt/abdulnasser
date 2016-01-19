@@ -56,6 +56,9 @@
 
 		});
 		
+		$('.burger-button').click(function(){
+			$('.burger-menu').toggleClass('active');
+		});
 
 		$('.caro-holder ul').bxSlider({
 			auto: false,
@@ -82,6 +85,7 @@
 
 		$(window).on('resize', function(){
 		    $('.caro-el').css('max-height',$(window).height()-400);
+		    
 		});
 
 		$('.cat-mobile').click(function(){
@@ -90,8 +94,23 @@
 
 		});
 		$('.plus-tag').click(function(){
+			var that = $(this);
+			var textContainer = $(this).parent().parent();
+			var textContent = $(this).parent().parent().find('.text-content');
+			$(textContent).removeClass('no-display');
 
-			$(this).parent().parent().find('.text-content').removeClass('no-display');
+			if(($(window).width())<680){
+		    	$(textContent).appendTo('body');
+		    }
+		    else {
+		    	$(textContent).appendTo($(that).parent().parent());
+		    }
+
+		    $('.text-content .cross').click(function(){
+		    	$(textContent).appendTo(textContainer);
+				$(this).parent().addClass('no-display');
+
+			});
 
 		});
 

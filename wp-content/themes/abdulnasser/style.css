@@ -152,7 +152,7 @@ img {
 
 .header a.work {
 	margin-left:-10px;
-	 
+
 
 }
 
@@ -305,7 +305,7 @@ body.home {
 	/* max-width: 80%; */
 }
 
-.caro-holder .caro-contain .text-content {
+.text-content {
 	position:absolute;
 	bottom:0px;
 	left: 0px;
@@ -315,18 +315,18 @@ body.home {
 	width: 70%;
 }
 
-.caro-holder .caro-contain .text-content .title {
+.text-content .title {
 	font:34px 'gothambold';
 	letter-spacing: 2px;
 	width:60%;
 }
 
-.caro-holder .caro-contain .text-content .content {
+.text-content .content {
 	font-size:13px;
 	letter-spacing: 1px;
 }
 
-.caro-holder .caro-contain .text-content .cross{
+.text-content .cross{
 	background-image: url('img/plus79.svg');
     background-size: 39px;
     width: 70px;
@@ -571,6 +571,33 @@ div.sharer a span {
 	}
 
 }
+
+.burger-menu {
+	display:none;
+	width:100%;
+	height:100%;
+	position:fixed;
+	z-index:100;
+	padding:5%;
+	top: 120px;
+	background-color:white;
+}
+
+.burger-menu.active {
+	display:block;
+}
+
+.burger-menu a {
+	font:25px 'gothammedium';
+	color:black;
+	display:block;
+	text-decoration:none;
+}
+
+.burger-button {
+	display:none;
+}
+
 /*  GO FULL WIDTH BELOW 480 PIXELS */
 @media only screen and (max-width: 680px) {
     
@@ -578,10 +605,36 @@ div.sharer a span {
 		width: 100%; 
 	}
 
+	.burger-button {
+		display:block;
+		width: 50px;
+		padding-top: 43px;
+		background:#fff url(img/burger.png);
+		background-position:Center;
+		background-size:contain;
+		background-repeat:no-repeat;
+		position:absolute;
+		top: 66px;
+		cursor:pointer;
+		z-index: 80;
+	}
+
 	.header .logo {
 		width:10%;
 		overflow:hidden;
 	}
+	.text-content {
+		position:fixed;
+		bottom:0px;
+		left: 0px;
+		text-align: left;
+		background-color: white;
+		padding: 10px 15px 70px;
+		width: 100%;
+		height:90%;
+		z-index: 95;
+	}
+
 
 	body {
 		padding-top:20px;
