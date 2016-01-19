@@ -38,7 +38,8 @@
 							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
 							Abdulnasser Gharem
 						</a>
-
+						<a class="work" href="/work">Work</a>
+						
 						<a href="<?php echo home_url(); ?>" class="mobile">
 							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
 							AG
