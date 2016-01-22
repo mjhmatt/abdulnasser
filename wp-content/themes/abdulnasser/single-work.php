@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 	<div class="clear">
-		<div class="clear next-prev">
+		<div class="clear next-prev desktop">
 			
 			<?php
 			$prev_post = get_previous_post();
@@ -41,6 +41,8 @@
 								<?php } else { ?>
 									<img class="caro-el" src="<?php echo $file["url"];?>"/>
 								<?php } ?>
+
+
 
 
 
