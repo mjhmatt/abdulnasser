@@ -384,7 +384,7 @@ body.home {
 .caro-holder .social-contain {
 	position: absolute;
 	display:inline-block;
-	bottom: 0;
+	bottom: 4px;
 	right: -75px;
 }
 span.plus-tag{
@@ -744,7 +744,7 @@ div.sharer a span {
 		top:0px;
 		right:0px;
 		height:100%;
-		width: 82%;
+		width: 100%;
 		background-color: black;
 		z-index: 110;
 		color: white;

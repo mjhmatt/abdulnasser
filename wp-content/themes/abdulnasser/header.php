@@ -25,13 +25,14 @@
 
 	</head>
 	<body <?php body_class(); ?>>
-	<div class="burger-menu"><a class="work" href="/work">Work</a></div>
+	<div class="burger-menu"><a class="home" href="/">Home</a><a class="work" href="/work">Work</a></div>
 		<!-- wrapper -->
 		<div class="wrapper">
 
 			<!-- header -->
 			<header class="header clear" role="banner">
 
+						
 					<!-- logo -->
 					<div class="logo">
 						<a href="<?php echo home_url(); ?>" class="desktop">
