@@ -83,7 +83,7 @@ function abdul_register_meta_boxes( $meta_boxes )
 				'name' => 'Feature',
 				'id' => 'home_feature',
 				'type' => 'checkbox_list',
-				'options' => array('1' => 'Feature on Home Page', '2' => 'Feature on Work Page'),
+				'options' => array('1' => 'Feature on Home Page', '2' => 'Feature on Work Page',),
 			),
 			// array(
 			// 	'name' => 'Video',

@@ -201,6 +201,58 @@ body.single-work .header a.work {
 /*------------------------------------*\
 	HOME
 \*------------------------------------*/
+
+.sliders li {
+	background-size:cover;
+}
+
+.sliders li .hover-container {
+	position: absolute;
+    bottom: 0;
+    width: 70%;
+    height: 25%;
+    background-color: white;
+    display:none;
+    z-index:50;
+}
+
+.sliders li .hover-container.active {
+	display:block;
+}
+
+.sliders li .hover-container .hover-title {
+	font: 34px 'gothambold';
+	display:block;
+	padding-top:10px;
+	padding-left:10px;
+}
+
+.sliders li .hover-container .hover-subtitle {
+	font: 13px 'gothammedium';
+	display:block;
+	padding-top:20px;
+	width:80%;
+}
+
+.sliders li .cross {
+	position:absolute;
+	width:20px;
+	bottom:10px;
+	left:10px;
+	cursor:pointer;
+}
+
+.sliders li .open {
+    font: 27px 'Helvetica';
+    color: white;
+    border: 2px solid white;
+    padding: 0px 7px 4px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
 .work-container.home-container {
 	padding:0;
 }

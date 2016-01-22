@@ -63,6 +63,35 @@ function abdul_init()
         'show_admin_column' => true
     ));
 
+    register_post_type('Work Slider',
+        array(
+            'hierarchical' => true,
+            'labels' => array(
+                'name' => 'Work Slider',
+                'singular_name' => 'Work Slider',
+                'menu_name' => 'Work Slider',
+                'all_items' => 'Work Slider',
+                'add_new' => 'Add New',
+                'add_new_item' => 'Add New Work Slider',
+                'edit_item' => 'Edit Work Slider',
+                'new_item' => 'New Work Slider',
+                'view_item' => 'View Work Slider',
+                'search_items' => 'Search Work Slider',
+                'not_found' => 'No Work Slider Found',
+                'not_found_in_trash' => 'No Work Slider Found in Trash',
+                'parent_item_colon' => 'Parent Work Slider'
+            ),
+            'menu_position' => 5,
+            'public' => true,
+            'supports' => array(
+                'title',
+                'editor',
+                'thumbnail',
+                'excerpt'
+            )
+        )
+    );
+
 }
 add_action('init', 'abdul_init');
 
