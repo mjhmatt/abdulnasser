@@ -178,6 +178,14 @@ body.single-work .header a.work {
 	display:none;
 }
 
+.header #menu-menu {
+	display:inline;
+}
+
+.header #menu-menu li {
+	display:inline;
+	margin-left:-10px;
+}
 /*------------------------------------*\
 	FOOTER
 \*------------------------------------*/
@@ -477,6 +485,114 @@ div.sharer a{
 div.sharer a span {
 	visibility:hidden;
 }
+
+
+/*------------------------------------*\
+	CALENDAR
+\*------------------------------------*/
+
+.calendar {
+	font:14px 'gothambookregular';
+}
+
+.calendar .sidebar {
+	padding-left:20px;
+}
+
+
+.calendar .sidebar ul li a{
+	font: 14px 'gothambookregular';
+	text-decoration:none;
+	border-top:1px solid black;
+	padding:10px 0px;
+	display:block;
+	color:black;
+}
+
+
+.calendar .sidebar ul li a.active {
+	font-family:'gothambold';
+
+	border-top:2px solid black;
+	border-bottom:1px solid black;
+
+}
+
+.calendar .sidebar ul li:last-child a {
+	border-bottom:1px solid black;
+}
+
+
+.calendar .sidebar ul li:last-child a.active {
+	border-bottom:2px solid black;
+}
+
+
+
+.calendar .list ul {
+	padding:0% 2% 0 10%;
+}
+
+.calendar .list ul li{
+	border-top:1px solid black;
+	padding:10px 0px;
+	cursor:pointer;
+}
+
+.calendar .list ul li:last-child{
+	border-top:1px solid black;
+	border-bottom:1px solid black;
+}
+
+.calendar .list ul li .date{
+	width:20%;
+	display:inline-block;	
+}
+
+.calendar .list ul li .plus{
+	font-size: 40px;
+	line-height: 14px;
+	cursor: pointer;
+}
+
+.calendar .list ul li .date{
+	
+}
+
+.calendar .list .related-posts {
+	display:none;
+}
+
+.calendar .list .related-posts.active {
+	display:block;
+}
+
+.calendar .list .related-posts .link {
+	text-decoration:none;
+	color:black;
+	padding-left:20%;
+}
+
+
+.calendar .list .related-posts .arrow {
+    width: 15px;
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*  SECTIONS  */
 .section {

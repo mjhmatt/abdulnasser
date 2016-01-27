@@ -92,6 +92,84 @@ function abdul_init()
         )
     );
 
+    register_post_type('channel',
+        array(
+            'hierarchical' => true,
+            'labels' => array(
+                'name' => 'Channel',
+                'singular_name' => 'Channel',
+                'menu_name' => 'Channel',
+                'all_items' => 'Channel',
+                'add_new' => 'Add New',
+                'add_new_item' => 'Add New Channel',
+                'edit_item' => 'Edit Channel',
+                'new_item' => 'New Channel',
+                'view_item' => 'View Channel',
+                'search_items' => 'Search Channel',
+                'not_found' => 'No Channel Found',
+                'not_found_in_trash' => 'No Channel Found in Trash',
+                'parent_item_colon' => 'Parent Channel'
+            ),
+            'menu_position' => 5,
+            'public' => true,
+            'supports' => array(
+                'title',
+                'editor',
+                'thumbnail',
+                'excerpt'
+            )
+        )
+    );
+
+    register_taxonomy('channel-category', 'channel', array(
+        'hierarchical' => true,
+        'labels' => array(
+            'name' => 'Channel Categories',
+            'singular_name' => 'Channel Category',
+            'search_items' => 'Search Channel Categories',
+            'popular_items' => null,
+            'all_items' => 'All Channel Categories',
+            'edit_item' => 'Edit Channel Category',
+            'update_item' => 'Update Channel Category',
+            'add_new_item' => 'Add New Channel Category',
+            'new_item_name' => 'New Channel Category Name',
+            'separate_items_with_commas' => null,
+            'add_or_remove_items' => null,
+            'choose_from_most_used' => null,
+        ),
+        'show_admin_column' => true
+    ));
+
+    register_post_type('calendar',
+        array(
+            'hierarchical' => true,
+            'labels' => array(
+                'name' => 'Calendar',
+                'singular_name' => 'Calendar',
+                'menu_name' => 'Calendar',
+                'all_items' => 'Calendar',
+                'add_new' => 'Add New',
+                'add_new_item' => 'Add New Calendar',
+                'edit_item' => 'Edit Calendar',
+                'new_item' => 'New Calendar',
+                'view_item' => 'View Calendar',
+                'search_items' => 'Search Calendar',
+                'not_found' => 'No Calendar Found',
+                'not_found_in_trash' => 'No Calendar Found in Trash',
+                'parent_item_colon' => 'Parent Calendar'
+            ),
+            'menu_position' => 5,
+            'public' => true,
+            'supports' => array(
+                'title',
+                'thumbnail',
+            ),
+            'taxonomies' => array('post_tag')
+        )
+    );
+
+    
+
 }
 add_action('init', 'abdul_init');
 

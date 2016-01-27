@@ -119,6 +119,22 @@
 
 		});
 
+
+		/*------------------------------------*\
+			Calendar page
+		\*------------------------------------*/
+
+		$('.calendar-info').click(function(){
+
+			$(this).next('.related-posts').toggleClass('active');
+			if($(this).find('.plus').html()=='-')
+				$(this).find('.plus').html('+');
+			else
+				$(this).find('.plus').html('-')
+
+		});
+
+
 		$(window).on('resize', function(){
 		    $('.caro-el').css('max-height',$(window).height()-400);
 		    

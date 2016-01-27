@@ -19,27 +19,11 @@
 
 			<!-- post title -->
 			<h1>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+				<?php the_title(); ?>
 			</h1>
 			<!-- /post title -->
 
-			<!-- post details -->
-			<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-			<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-			<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-			<!-- /post details -->
-
 			<?php the_content(); // Dynamic Content ?>
-
-			<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
-
-			<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
-
-			<p><?php _e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
-
-			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
-
-			<?php comments_template(); ?>
 
 		</article>
 		<!-- /article -->
@@ -48,20 +32,45 @@
 
 	<?php else: ?>
 
-		<!-- article -->
-		<article>
-
-			<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
-
-		</article>
-		<!-- /article -->
-
 	<?php endif; ?>
 
 	</section>
 	<!-- /section -->
 	</main>
 
-<?php get_sidebar(); ?>
-
+<div class="relatedposts">
+<h3>Related posts</h3>
+<?php
+    $orig_post = $post;
+    global $post;
+    $tags = wp_get_post_tags($post->ID);
+     
+    if ($tags) {
+    $tag_ids = array();
+    foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
+    $args=array(
+    'tag__in' => $tag_ids,
+    'post__not_in' => array($post->ID),
+    'posts_per_page'=>4, // Number of related posts to display.
+    'caller_get_posts'=>1
+    );
+     
+    $my_query = new wp_query( $args );
+ 
+    while( $my_query->have_posts() ) {
+    $my_query->the_post();
+    ?>
+     
+    <div class="relatedthumb">
+        <a rel="external" href="<? the_permalink()?>"><?php the_post_thumbnail(array(150,100)); ?><br />
+        <?php the_title(); ?>
+        </a>
+    </div>
+     
+    <?php }
+    }
+    $post = $orig_post;
+    wp_reset_query();
+    ?>
+</div>
 <?php get_footer(); ?>

@@ -476,53 +476,27 @@ function abdul_register_meta_boxes( $meta_boxes )
 
 	);	
 
-
 	$meta_boxes[] = array(
-		'title' => 'Post Info',
-		'pages' => array('post'),
+		'title' => 'Calendar Info',
+		'pages' => array('calendar'),
 		'priority' => 'high',
-		'fields' => array(
+		'fields' => array(	
 			array(
-				'name' => 'News Subtitle',
-				'id' => 'case_subtitle',
+				'name' => 'Location',
+				'desc' => 'Enter location of event',
+				'id' => 'location',
 				'type' => 'text',
 			),
 			array(
-				'name' => 'Carousel Images',
-				'id' => 'caro_images',
-				'type' => 'image_advanced',
-				'max_file_uploads' => 0,
+				'name' => 'Date',
+				'id' => 'event_date',
+				'type' => 'date',
 			),
-			
-			array(
-				'name' => 'Area content below carousel',
-				'id' => 'area_below',
-				'type' => 'wysiwyg',
-			),
-			array(
-				'name' => 'Video',
-				'desc' => 'Please visit <a href="http://embedresponsively.com/" target="_blank">http://embedresponsively.com/</a> to generate reponsive embed code for your video. Copy and paste the embed code below.',
-				'id' => 'about_video',
-				'type' => 'text',
-			),
-			array(
-				'name' => 'ISSUU Link',
-				'id' => 'issuu_link',
-				'type' => 'text',
-			),
-			array(
-				'name' => 'Quote',
-				'id' => 'work_quote',
-				'type' => 'text',
-			),
-			array(
-				'name' => 'PDF Upload',
-				'id' => 'pdf_upload',
-				'type' => 'file',
-				'max_file_uploads' => 1,
-			),
-		),
-	);
+
+		)
+
+	);	
+
 
 	return $meta_boxes;
 }
