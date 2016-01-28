@@ -202,6 +202,9 @@ body.single-work .header a.work {
 	HOME
 \*------------------------------------*/
 
+body.home .bx-wrapper {
+	margin:0 auto;
+}
 .sliders li {
 	background-size:cover;
 }

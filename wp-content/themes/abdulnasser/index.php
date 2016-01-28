@@ -3,7 +3,7 @@
 	<main role="main">
 		<!-- section -->
 
-	<div class="clear flex-slider">
+	<div class="clear">
 		<ul class="sliders">
 			<?php query_posts(array('post_type' => 'workslider', 'orderby' => 'date', 'order' => 'ASC', 'posts_per_page' => -1)); ?>
 
