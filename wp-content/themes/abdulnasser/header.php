@@ -1,3 +1,6 @@
+<?php 
+header("Access-Control-Allow-Origin: *"); 
+?>
 <!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
 	<head>

@@ -581,17 +581,143 @@ div.sharer a span {
 
 
 
+/*------------------------------------*\
+	NEWS & PRESS
+\*------------------------------------*/
+
+.news-press .inside {
+	padding-left:20px;
+}
+
+.news-press .sidebar {
+
+}
+
+
+.news-press .sidebar a {
+	color:rgb(196,196,196);
+	text-decoration:none;
+	margin-bottom: 5px;
+	display: block;
+}
+
+.news-press .sidebar a.active {
+	color:black;
+	text-decoration:underline;
+}
+
+.news-press .posts {
+	padding-right:2%;
+}
+
+.news-press .posts .single-post {
+	background-color:white;
+	padding:1% 2%;
+	display:block;
+	text-decoration:none;
+	color:black;
+	margin-bottom:5px;
+}
+
+.news-press .posts .view-article {
+	display:none;
+}
+
+.news-press .posts .single-post .content-area {
+	width:60%;
+}
+
+.news-press .posts .single-post .right-content {
+	background-size:cover;
+	width:30%;
+	display:block;
+	padding-top: 15%;
+	background-position: center center;
+}
+
+.news-press .posts .single-post .date {
+	font:9px 'gothammedium';
+	padding-top:25px;
+}
+
+
+.news-press .posts .single-post .title {
+	font: 27px 'gothambookregular';
+	padding:20px 0px;
+}
+
+
+.news-press .posts .single-post .excerpt {
+	font:12px 'gothambookregular';
+}
+
+.news-press .posts .single-post span {
+	display:block;
+}
+
+.news-press .categories {
+	width:100%;
+	margin-bottom: 20px;
+}
+
+.news-press .categories li{
+	display:inline-block;
+	color:rgb(196,196,196);
+	font-size:16px;
+	display:inline-block;
+	margin-right:25px;
+}
+
+.news-press .categories li a {
+	color:black;
+	text-decoration:none;
+}
 
 
 
+/*------------------------------------*\
+	NEWS & PRESS INSIDE
+\*------------------------------------*/
 
 
+.inside-press .background-feature {
+    width: 100%;
+    padding-top: 40%;
+    background-size: cover;
+    background-position: center;
+    margin-top: -120px;
+}
 
+.inside-press .article {
+	background-color:white;
+	width:60%;
+	margin:0 auto;
+	margin-top:-8%;
+	padding:20px;
+}
+.inside-press .article h1 {
+	font:59px 'gothambookregular';
+	max-width:70%;
+}
 
+.inside-press .article h2 {
+	font:23px 'gothambookregular';
+	max-width:70%;
+	padding: 35px 0 100px;
+}
 
+.inside-press .article h3 {
+	margin-bottom:35px;
+}
 
+.inside-press .article h3 span, .inside-press .article p{
+	display:block;
+	font:20px 'gothambookregular';
+	max-width:70%;
+}
 
-
+.inside-press .article p{
+	margin-top:35px;
 
 
 /*  SECTIONS  */
