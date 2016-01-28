@@ -190,7 +190,7 @@
 		  arrows: false,
 		  fade: true,
 		  autoplay: true,
-		  autoplaySpeed: 3000,
+		  autoplaySpeed: 2000,
 		  respondTo: 'min'
 		});
 		$('.sliders, .sliders li').css('height',$(window).height()-50);
