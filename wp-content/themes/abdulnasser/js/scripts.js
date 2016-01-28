@@ -43,6 +43,7 @@
 		});
 
 
+
 		$('.cat-sidebar .cat-item').click(function(){
 			$('.cat-sidebar').addClass('no-display');
 			$('.cat-sidebar .plus-minus').insertBefore($(this));
@@ -60,62 +61,52 @@
 			$('.burger-menu').toggleClass('active');
 		});
 
-		$('.caro-holder ul').bxSlider({
-			auto: false,
-			mode: 'fade',
-			autoHover: true,
-			adaptiveHeight: true,
-			adaptiveHeightSpeed: 0,
-			infiniteLoop: false,
-			video: true,
-			useCSS: true,
-			onSliderLoad: function(){
-				// AddThis
+		// $('.caro-holder ul').bxSlider({
+		// 	auto: false,
+		// 	mode: 'fade',
+		// 	autoHover: true,
+		// 	adaptiveHeight: true,
+		// 	adaptiveHeightSpeed: 0,
+		// 	infiniteLoop: false,
+		// 	video: true,
+		// 	useCSS: true,
+		// 	onSliderLoad: function(){
+		// 		// AddThis
 
-				setTimeout(function(){
-					$('.caro-holder .caro-contain').each(function(){
-					 $('.caro-el').css('max-height',$(window).height()-400);
-					});
-				},100);
-			},
-			onSlideAfter: function(){
-				$('.caro-el').css('max-height',$(window).height()-400);
-			}
+		// 		setTimeout(function(){
+		// 			$('.caro-holder .caro-contain').each(function(){
+		// 			 $('.caro-el').css('max-height',$(window).height()-400);
+		// 			});
+		// 		},100);
+		// 	},
+		// 	onSlideAfter: function(){
+		// 		$('.caro-el').css('max-height',$(window).height()-400);
+		// 	}
 
+		// });
+
+		$('.caro-holder ul').slick({
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+		  arrows: false,
+		  fade: true,
+		  autoplay: false,
+		  autoplaySpeed: 3000,
+		  respondTo: 'min',
+		  dots:true
 		});
+		$('.caro-holder .slick-slider, .caro-holder ul li.slick-slide').css('height',$(window).height()-50);
 
-		$('.sliders').bxSlider({
-			auto: true,
-			mode: 'fade',
-			autoHover: true,
-			adaptiveHeight: true,
-			adaptiveHeightSpeed: 0,
-			infiniteLoop: false,
-			video: true,
-			useCSS: true,
-			onSliderLoad: function(){
-				// AddThis
-				setTimeout(function(){
-					 $('.bx-wrapper, .bx-viewport, .sliders, .flex-slider').css('height',$(window).height()-50);
-				},100);
-				setTimeout(function(){
-					$('.sliders').each(function(){
-					 $('.sliders li').css('height',$(window).height()-50);
-					});
-				},100);
-			},
-			onSlideAfter: function(){
-				$('.slider li, .bx-wrapper, .bx-viewport, .sliders, .flex-slider').css('height',$(window).height()-400);
-			}
-
-		});
 
 		$('.cross').click(function(){
 			$(this).parent().removeClass('active');
+            window.homeSlider.startAuto();
 		});
+
 
 		$('.open').click(function(){
 			$(this).prev().addClass('active');
+			window.homeSlider.stopAuto();
 
 		});
 
@@ -137,6 +128,7 @@
 
 		$(window).on('resize', function(){
 		    $('.caro-el').css('max-height',$(window).height()-400);
+		    $('.sliders, .sliders li').css('height',$(window).height()-50);
 		    
 		});
 
@@ -173,14 +165,54 @@
 		});
 		
 		
+	$(window).load(function() {
+	 // executes when complete page is fully loaded, including all frames, objects and images
+		 $( "body" ).fadeTo( "fast" , 1, function() {
+		    // Animation complete.
+		    setTimeout(function(){
+		    	$container.packery();
+		    },500);
+
+		  });
+		//window.homeSlider = $('.sliders').bxSlider({
+		// 	auto: true,
+		// 	mode: 'fade',
+		// 	autoHover: true,
+		// 	adaptiveHeight: true,
+		// 	adaptiveHeightSpeed: 0,
+		// 	infiniteLoop: true,
+		// 	video: true,
+		// 	useCSS: true,
+		// 	onSliderLoad: function(){
+		// 		// AddThis
+		// 		setTimeout(function(){
+		// 			 $('.bx-wrapper, .bx-viewport, .sliders').css('height',$(window).height()-50);
+		// 			 console.log($(window).height());
+		// 		},500);
+		// 		setTimeout(function(){
+		// 			$('.sliders').each(function(){
+		// 			 $('.sliders li').css('height',$(window).height()-50);
+		// 			});
+		// 		},100);
+		// 	},
+		// 	onSlideAfter: function(){
+		// 	}
+
+		// });
+
+		$('.sliders').slick({
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+		  arrows: false,
+		  fade: true,
+		  autoplay: true,
+		  autoplaySpeed: 2000,
+		  respondTo: 'min'
+		});
+		$('.sliders, .sliders li').css('height',$(window).height()-50);
+	});
 		
 	});
 
-	$(window).load(function() {
-	 // executes when complete page is fully loaded, including all frames, objects and images
-	 $( "body" ).fadeTo( "fast" , 1, function() {
-	    // Animation complete.
-	  });
-	});
 	
 })(jQuery, this);

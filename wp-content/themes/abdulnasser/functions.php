@@ -264,6 +264,8 @@ function html5blank_header_scripts()
         wp_register_script('packery', get_template_directory_uri() . '/js/packery.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('packery'); // Enqueue it!
 
+         wp_register_script('imagesLoaded', get_template_directory_uri() . '/js/imagesLoaded.js', array('jquery'), '1.0.0'); // Custom scripts
+        wp_enqueue_script('imagesLoaded'); // Enqueue it!
 
         wp_register_script('fitvids', get_template_directory_uri() . '/js/fitvids.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('fitvids'); // Enqueue it!

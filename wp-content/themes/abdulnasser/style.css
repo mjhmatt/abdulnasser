@@ -210,8 +210,12 @@ body.single-work .header a.work {
 	HOME
 \*------------------------------------*/
 
+body.home .bx-wrapper {
+	margin:0 auto;
+}
 .sliders li {
 	background-size:cover;
+	background-position:center;
 }
 
 .sliders li .hover-container {
@@ -396,6 +400,38 @@ body.home {
 	margin:0 auto;
 	display:inline-block;
 	/* max-width: 80%; */
+}
+
+.caro-holder .slick-dots {
+    display: block;
+    bottom: 120px;
+    position: Absolute;
+    left: 0;
+    right: 0;
+    text-align:center;
+}
+.caro-holder .slick-dots li {
+	display:inline;
+	cursor:pointer;
+	margin:0px 5px;
+	
+}
+.caro-holder .slick-dots li button {
+	display:inline-block;
+	border:none;
+	color:transparent;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	width:15px;
+	height:15px;
+	color:transparent;
+	background-color:white;
+	cursor:pointer;
+	
+}
+
+.caro-holder .slick-dots li.slick-active button {
+	background-color:black;
 }
 
 .text-content {
@@ -727,9 +763,9 @@ div.sharer a span {
 	margin: 0px;
 }
 
-[aria-hidden=true] {
+/*[aria-hidden=true] {
 	visibility:hidden;
-}
+}*/
 /*  COLUMN SETUP  */
 .col {
 	display: block;
