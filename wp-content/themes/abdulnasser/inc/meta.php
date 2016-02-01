@@ -497,6 +497,23 @@ function abdul_register_meta_boxes( $meta_boxes )
 
 	);	
 
+	$meta_boxes[] = array(
+		'title' => 'Channel Info',
+		'pages' => array('channel'),
+		'priority' => 'high',
+		'fields' => array(	
+			array(
+				'name' => 'Youtube Video',
+				'desc' => 'Enter Youtube URL ID',
+				'id' => 'channel_video',
+				'type' => 'text',
+			),
+
+		)
+
+	);	
+
+
 
 	return $meta_boxes;
 }

@@ -117,7 +117,7 @@ function abdul_init()
                 'editor',
                 'thumbnail',
                 'excerpt'
-            )
+            ),
         )
     );
 
@@ -605,6 +605,36 @@ function create_post_type_html5()
         ) // Add Category and Post Tags support
     ));
 }
+
+
+add_filter( 'getarchives_where', 'getarchives_where_filter', 10, 2 );
+add_filter( 'generate_rewrite_rules', 'generate_channel_rewrite_rules' );
+
+function getarchives_where_filter( $where, $args ) {
+
+    if ( isset($args['post_type']) ) {      
+        $where = "WHERE post_type = '$args[post_type]' AND post_status = 'publish'";
+    }
+
+    return $where;
+}
+
+function generate_channel_rewrite_rules( $wp_rewrite ) {
+
+    $channel_rules = array(
+        'channel/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/?$' => 'index.php?post_type=channel&year=$matches[1]&monthnum=$matches[2]&day=$matches[3]',
+        'channel/([0-9]{4})/([0-9]{1,2})/?$' => 'index.php?post_type=channel&year=$matches[1]&monthnum=$matches[2]',
+        'channel/([0-9]{4})/?$' => 'index.php?post_type=channel&year=$matches[1]' 
+    );
+
+    $wp_rewrite->rules = $channel_rules + $wp_rewrite->rules;
+}
+
+function get_archives_channel_link( $link ) {
+
+    return str_replace( get_site_url(), get_site_url() . '/channel', $link );
+
+};
 
 /*------------------------------------*\
 	ShortCode Functions

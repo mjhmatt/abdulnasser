@@ -18,7 +18,7 @@
 			itemSelector: 'a',
 		});
 
-		$('.desktop .cat-item, .cat-sidebar .cat-item').click(function() {
+		$('.work .desktop .cat-item, .work .cat-sidebar .cat-item').click(function() {
 			var $this = $(this),
 				href = $this.attr('data-href');
 

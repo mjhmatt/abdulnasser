@@ -28,7 +28,7 @@ header("Access-Control-Allow-Origin: *");
 
 	</head>
 	<body <?php body_class(); ?>>
-	<div class="burger-menu"><a class="home" href="/">Home</a><a class="work" href="/work">Work</a></div>
+	<div class="burger-menu"><a class="home" href="/">Home</a><?php wp_nav_menu(  ); ?> </div>
 		<!-- wrapper -->
 		<div class="wrapper">
 
@@ -43,7 +43,9 @@ header("Access-Control-Allow-Origin: *");
 							Abdulnasser Gharem
 						</a>
 						<!-- <a class="work" href="/work">Work</a> -->
-						<?php wp_nav_menu(  ); ?> 
+						<div class="desktop-menu">
+							<?php wp_nav_menu(  ); ?> 
+						</div>
 						
 						<a href="<?php echo home_url(); ?>" class="mobile">
 							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->

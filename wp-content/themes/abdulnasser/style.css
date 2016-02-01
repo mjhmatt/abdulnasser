@@ -178,13 +178,20 @@ body.single-work .header a.work {
 	display:none;
 }
 
-.header #menu-menu {
+.header .menu {
 	display:inline;
 }
 
-.header #menu-menu li {
+.header .menu li {
 	display:inline;
 	margin-left:-10px;
+}
+
+.header .desktop-menu {
+	display:inline-block;
+}
+.header .desktop-menu .menu {
+	display:block;
 }
 /*------------------------------------*\
 	FOOTER
@@ -325,14 +332,15 @@ body.home {
 	padding-bottom:20px;
 }
 
-.work-container .cat-container span{
+.cat-container > *{
 	color:#C4C4C4;
 	font:16px 'gothammedium';
 	margin-right:1.5%;
 	cursor:pointer;
+	text-decoration:none;
 }
 
-.work-container .cat-container span.active{
+.cat-container span.active{
 	color:black;
 	border-bottom:2px solid black;
 }
@@ -531,6 +539,14 @@ div.sharer a span {
 	font:14px 'gothambookregular';
 }
 
+.calendar .mobile {
+	display:none;
+}
+
+.calendar .desktop {
+	display:block;
+}
+
 .calendar .sidebar {
 	padding-left:20px;
 }
@@ -614,6 +630,109 @@ div.sharer a span {
     width: 15px;
     margin-right: 5px;
 }
+
+
+/*------------------------------------*\
+	CHANNEL
+\*------------------------------------*/
+
+.channel .inside {
+	padding-left:20px;
+}
+
+.channel .sidebar {
+
+}
+
+
+.channel .sidebar a {
+	color:rgb(196,196,196);
+	text-decoration:none;
+	margin-bottom: 5px;
+	display: block;
+}
+
+.channel .sidebar a.active {
+	color:black;
+	text-decoration:underline;
+}
+
+.channel .posts {
+	padding-right:2%;
+}
+
+.channel .posts .single-post {
+	background-color:white;
+	padding: 0% 0% 0 2%;
+	display:block;
+	text-decoration:none;
+	color:black;
+	margin-bottom: 3%;
+	width: 46%;
+	height:213px;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.channel .posts .single-post:nth-child(2n) {
+	margin-left:3%;
+}
+
+.channel .posts .view-article {
+	display:none;
+}
+
+.channel .posts .single-post .content-area {
+	width: 30%;
+}
+
+.channel .posts .single-post .right-content {
+	background-size:cover;
+	width: 65%;
+	display:block;
+	height: 213px;
+	background-position: center center;
+}
+
+.channel .posts .single-post .date {
+	font:9px 'gothammedium';
+	padding-top:25px;
+}
+
+
+.channel .posts .single-post .title {
+	font: 27px 'gothambookregular';
+	padding:20px 0px;
+}
+
+
+.channel .posts .single-post .excerpt {
+	font:12px 'gothambookregular';
+}
+
+.channel .posts .single-post span {
+	display:block;
+}
+
+.channel .categories {
+	width:100%;
+	margin-bottom: 20px;
+}
+
+.channel .categories li{
+	display:inline-block;
+	color:rgb(196,196,196);
+	font-size:16px;
+	display:inline-block;
+	margin-right:25px;
+}
+
+.channel .categories li a {
+	color:black;
+	text-decoration:none;
+}
+
+
 
 
 
@@ -805,6 +924,10 @@ div.sharer a span {
 
 }
 
+.calendar-title.mobile {
+	display:none;
+}
+
 /*  SECTIONS  */
 .section {
 	clear: both;
@@ -911,6 +1034,18 @@ div.sharer a span {
 		padding:11% 0%;
 	}
 
+
+	.header .logo a {
+	    font: 14px 'gothammedium';
+	    text-decoration: none;
+	    color: black;
+	    background-color: white;
+	    padding: 20px 20px 0px 20px;
+	    height: 60px;
+	    display: inline-block;
+	    pointer-events: all;
+	}
+
 	[aria-hidden=true] {
 	     visibility: visible; 
 	}
@@ -980,7 +1115,7 @@ div.sharer a span {
 	.caro-holder .caro-contain {
 	    display: inline-block;
 	    position: relative;
-	    width: %;
+	    width: 100%;
 	}
 
 }
@@ -1018,6 +1153,14 @@ div.sharer a span {
 		width: 100%; 
 	}
 
+	.header .desktop-menu {
+ 	   display: none;
+	}
+	.work-container.home-container {
+	    padding: 0;
+	    padding-bottom: 70px;
+	}
+
 	.burger-button {
 		display:block;
 		width: 50px;
@@ -1026,10 +1169,14 @@ div.sharer a span {
 		background-position:Center;
 		background-size:contain;
 		background-repeat:no-repeat;
-		position:absolute;
+		position: fixed;
 		top: 66px;
 		cursor:pointer;
 		z-index: 80;
+	}
+
+	.header .desktop-menu #menu-menu {
+		display:none;
 	}
 
 	.header .logo {
@@ -1075,7 +1222,9 @@ div.sharer a span {
 		display:inline-block;
 		font-size:26px;
 		width: 50px;
-    	padding: 12px 5px;
+		padding: 12px 5px;
+		top: 0;
+		position: absolute;
 	}
 
 	.cat-container.desktop {
@@ -1146,6 +1295,8 @@ div.sharer a span {
 
 	.cat-sidebar .cat-item {
 		font-size:25px;
+		color: white;
+		text-decoration: none;
 	} 
 
 	.cat-sidebar .cat-container {
@@ -1184,5 +1335,130 @@ div.sharer a span {
 		float:right;
 		width: 100%;
 	}
+
+
+	/*------------------------------------*\
+		NEWS 
+	\*------------------------------------*/
+
+	.news-press .sidebar .months {
+		display:none;
+	}
+
+	.news-press .posts {
+	    padding-right: 2%;
+	    margin-top: 23px;
+	}
 	
+	.news-press .inside {
+	    padding-left: 00px;
+	}
+
+	.news-press .posts .single-post .right-content {
+	    background-size: cover;
+	    width: 100%;
+	    display: block;
+	    padding-top: 50%;
+	    background-position: center center;
+	}
+
+	.news-press .posts .single-post .content-area {
+		width: 81%;
+		padding-bottom: 18px;
+	}
+
+	.news-title.mobile {
+		display:block;
+		font-size: 15px;
+		top: 45px;
+		text-align: center;
+		width: 100%;
+		margin-top: 85px;
+	}
+
+	/*------------------------------------*\
+		INSIDE NEWS  
+	\*------------------------------------*/
+
+
+	.inside-press .background-feature {
+	    width: 100%;
+	    padding-top: 50%;
+	    background-size: cover;
+	    background-position: center;
+	    margin-top: -20px;
+	}
+
+	.inside-press .article {
+	    background-color: white;
+	    width: 95%;
+	    margin: 0 auto;
+	    margin-top: -8%;
+	    padding: 20px;
+	}
+
+	.inside-press .article h1 {
+	    font: 40px 'gothambookregular';
+	    max-width: 70%;
+	}
+
+	.inside-press .article h2 {
+	    font: 19px 'gothambookregular';
+	    max-width: 70%;
+	    padding: 35px 0px;
+	}
+
+	.inside-press .article h3 span, .inside-press .article p {
+	    display: block;
+	    font: 20px 'gothambookregular';
+	    max-width: 80%;
+	    line-height: 30px;
+	}
+
+	.related-posts {
+		display:none;
+	}
+
+	/*------------------------------------*\
+		CALENDAR 
+	\*------------------------------------*/
+
+	.calendar .mobile {
+		display:block;
+		height: 100%;
+		padding-top: 90px;
+	}
+	
+	.calendar .mobile > .clear {
+		padding:20px 0px;
+		background-color:white;
+	}
+	.calendar .desktop {
+		display:none;
+	}
+
+	.calendar .list ul {
+	    padding: 0% 2% 0 2%;
+	}
+	.calendar .list ul li .date, .calendar .list ul li .title {
+	    width: 100;
+	    display: block;
+	    margin: 10px 0px;
+	}
+
+	.calendar .list .related-posts .link {
+	    text-decoration: none;
+	    color: black;
+	    padding-left: 0;
+	}
+
+	.calendar-title {
+		display:block;
+		font-size: 15px;
+		text-align: center;
+		width: 100%;
+		margin-top: 15px;
+		position: absolute;
+		top: 5px;
+	}
 }
