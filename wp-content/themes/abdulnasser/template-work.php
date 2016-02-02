@@ -8,7 +8,7 @@ get_header();
 
 
 $categories = get_terms('work-category');
-query_posts(array('post_type' => 'work', 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => -1));
+query_posts(array('post_type' => 'work', 'orderby' => 'date', 'order' => 'ASC', 'posts_per_page' => -1));
 
 ?>
 
