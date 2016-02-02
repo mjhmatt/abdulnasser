@@ -5,7 +5,7 @@
 
 	<div class="clear">
 		<ul class="sliders">
-			<?php query_posts(array('post_type' => 'workslider', 'orderby' => 'date', 'order' => 'ASC', 'posts_per_page' => -1)); ?>
+			<?php query_posts(array('post_type' => 'workslider', 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => -1)); ?>
 
 
 				<?php
@@ -27,7 +27,7 @@
 
 	<?php 
 		
-		query_posts(array('post_type' => 'work', 'orderby' => 'date', 'order' => 'ASC', 'posts_per_page' => -1,'meta_query' => array(array('key' => 'home_feature','value'=>1))));
+		query_posts(array('post_type' => 'work', 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => -1,'meta_query' => array(array('key' => 'home_feature','value'=>1))));
 
 	?>
 
