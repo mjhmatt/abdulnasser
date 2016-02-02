@@ -100,7 +100,6 @@
 
 		$('.cross').click(function(){
 			$(this).parent().removeClass('active');
-            window.homeSlider.startAuto();
 		});
 
 
@@ -190,7 +189,7 @@
 		  arrows: false,
 		  fade: true,
 		  autoplay: true,
-		  autoplaySpeed: 2000,
+		  autoplaySpeed: 7000,
 		  respondTo: 'min'
 		});
 		$('.sliders, .sliders li').css('height',$(window).height()-50);

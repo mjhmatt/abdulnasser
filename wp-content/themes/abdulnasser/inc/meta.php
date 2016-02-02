@@ -74,6 +74,8 @@ function abdul_register_meta_boxes( $meta_boxes )
 
 
 
+
+
 	$meta_boxes[] = array(
 		'title' => 'Work',
 		'pages' => array('work'),
@@ -523,6 +525,28 @@ function abdul_register_meta_boxes( $meta_boxes )
 			),
 		),
 	);
+
+$meta_boxes[] = array(
+		'title' => 'Work Slider',
+		'pages' => array('Work Slider'),
+		'priority' => 'high',
+		'fields' => array(
+			array(
+                'name' => 'Related Work',
+                'desc' => 'This will link to the work details page of the specific post',
+                'id' => 'related_work',
+                'type' => 'post',
+                'post_type' => 'work',
+                'field_type' => 'select_advanced',
+                'placeholder' => 'Select work',
+                'query_args' => array(
+                    'posts_per_page' => - 1,
+                )
+            ),
+
+		),
+	);
+
 
 	return $meta_boxes;
 }
