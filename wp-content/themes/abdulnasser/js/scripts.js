@@ -93,7 +93,8 @@
 		  autoplay: false,
 		  autoplaySpeed: 3000,
 		  respondTo: 'min',
-		  dots:true
+		  dots:true,
+		  'pauseOnHover':false
 		});
 		$('.caro-holder .slick-slider, .caro-holder ul li.slick-slide').css('height',$(window).height()-50);
 
@@ -192,7 +193,8 @@
 		  fade: true,
 		  autoplay: true,
 		  autoplaySpeed: 7000,
-		  respondTo: 'min'
+		  respondTo: 'min',
+		  'pauseOnHover':false
 		});
 		$('.sliders, .sliders li').css('height',$(window).height()-50);
 		$('.caro-el').css('max-height',$(window).height()-400);
