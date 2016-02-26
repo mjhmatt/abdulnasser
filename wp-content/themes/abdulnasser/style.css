@@ -175,7 +175,6 @@ body.single-work .header a.work {
 	height:60px;
 	background-color:white;
 	background-repeat:no-repeat;
-	display:none;
 }
 
 .header .menu {
@@ -259,6 +258,12 @@ body.home .bx-wrapper {
 	bottom:10px;
 	left:10px;
 	cursor:pointer;
+}
+
+.sliders li a {
+	position:absolute;
+	width:100%;
+	height:100%;
 }
 
 .sliders li .open {
@@ -402,6 +407,7 @@ body.home {
 	position: relative;
 	max-width: 100%;
 	margin: 0 auto;
+	padding: 0 90px;
 }
 .caro-holder li img, .caro-holder li iframe {
 	text-align:center;
@@ -412,7 +418,7 @@ body.home {
 
 .caro-holder .slick-dots {
     display: block;
-    bottom: 120px;
+    bottom: 0;
     position: Absolute;
     left: 0;
     right: 0;
@@ -437,6 +443,12 @@ body.home {
 	cursor:pointer;
 	
 }
+
+.single-work .slick-list {
+	overflow:visible;
+}
+
+
 
 .caro-holder .slick-dots li.slick-active button {
 	background-color:black;
@@ -489,7 +501,7 @@ body.home {
 	position: absolute;
 	display:inline-block;
 	bottom: 4px;
-	right: -75px;
+	right: 20px;
 }
 span.plus-tag{
 	background-image: url('img/plus79.svg');
@@ -924,6 +936,20 @@ div.sharer a span {
 
 }
 
+/*------------------------------------*\
+	Channel inside
+\*------------------------------------*/
+
+.about.inside-press .article {
+	margin-top:2%;
+}
+
+
+.about.inside-press .main-image {
+	width:100%;
+}
+
+
 .calendar-title.mobile {
 	display:none;
 }
@@ -1005,7 +1031,7 @@ div.sharer a span {
 }
 
 .caro-contain .caro-el {
-	/*width:100%;*/
+	width:100%;
 	/*min-height:550px;*/
 }
 
@@ -1107,15 +1133,13 @@ div.sharer a span {
 	}
 
 	.caro-contain .caro-el {
-		width:auto;
-		max-height:none!important;
-		min-height:none!important;
 	}
 
 	.caro-holder .caro-contain {
 	    display: inline-block;
 	    position: relative;
 	    width: 100%;
+	    padding: 0;
 	}
 
 }
@@ -1252,18 +1276,24 @@ div.sharer a span {
 		text-align: center;
 		z-index: 100;
 		display:block;
+		font:25px 'gothammedium';
+		padding-top: 13px;
+		pointer-events: all;
 	}
 
 	.cat-mobile .plus-minus {
 		font:25px 'gothambookregular';
 	}
 
-	.cat-mobile {
-		font:25px 'gothammedium';
-		padding-top: 13px;
-		pointer-events: all;
+	.single .cat-mobile {
+		font-size:14px;
+		padding-top:18px;
 	}
 
+	.single .cat-mobile a {
+		text-decoration:none;
+		color:white;
+	}
 	.cat-mobile span {
 		cursor:pointer;
 	}
@@ -1311,6 +1341,7 @@ div.sharer a span {
 	.caro-holder {
 	    padding-top: 170px;
 	}
+
 
 	.caro-holder .caro-contain {
 	    display: inline-block;
@@ -1420,6 +1451,60 @@ div.sharer a span {
 	}
 
 	/*------------------------------------*\
+		ABOUT
+	\*------------------------------------*/
+
+	.about.inside-press .article {
+		margin-top:2%;
+	}
+
+	.about.inside-press .article {
+	    margin-top: 100px;
+	}
+
+
+	/*------------------------------------*\
+		CHANNEL
+	\*------------------------------------*/
+
+	body.channel {
+		padding-top:120px;
+	}
+
+	body.channel-tax .channel {
+		padding-top:120px;
+	}
+
+	.channel .posts .single-post {
+		width:100%;
+		height: auto;
+	}
+
+	.channel .sidebar {
+		display:none;
+	}
+
+	.channel .posts .single-post .content-area {
+		width:100%;
+		float: none;
+	}
+
+	.channel .posts .single-post .right-content {
+		width:100%;
+		height: auto;
+		padding-top: 50%;
+		background-size: contain;
+		float: none;
+	}
+
+	.channel .posts .single-post:nth-child(2n) {
+		margin-left:0;
+	}
+
+	body.tax-channel-category {
+		margin-top:100px;
+	}
+	/*------------------------------------*\
 		CALENDAR 
 	\*------------------------------------*/
 
@@ -1444,6 +1529,29 @@ div.sharer a span {
 	    width: 100;
 	    display: block;
 	    margin: 10px 0px;
+	}
+
+	.calendar .list ul li {
+		border:none;
+	}
+
+	.calendar .list ul li.calendar-info {
+		border-top:1px solid black;
+	}
+
+	.calendar .list ul li.calendar-info:last-child {
+		border-bottom:1px solid black;
+	}
+	.list ul li .title {
+		font-weight:bold;
+	}
+
+	.calendar .list ul li:last-child {
+		border:none;
+	}
+
+	.calendar .list {
+		/*border-bottom:1px solid black;*/
 	}
 
 	.calendar .list .related-posts .link {

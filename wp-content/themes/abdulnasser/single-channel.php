@@ -1,12 +1,14 @@
 <?php get_header(); ?>
 
 <div class="cat-mobile clear mobile">
-	<a class="" href="<?php echo site_url(); ?>/news-press">BACK TO NEWS & PRESS</a>
+	<a class="" href="<?php echo site_url(); ?>/channel">BACK TO CHANNEL</a>
 </div>
+
 
 
 <div class="clear about inside-press">
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+
 
 		<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>
 		<!-- <div class="background-feature" style="background-image:url(<?php //echo $url;?>);"></div> -->

@@ -74,6 +74,8 @@ function abdul_register_meta_boxes( $meta_boxes )
 
 
 
+
+
 	$meta_boxes[] = array(
 		'title' => 'Work',
 		'pages' => array('work'),
@@ -492,6 +494,18 @@ function abdul_register_meta_boxes( $meta_boxes )
 				'id' => 'event_date',
 				'type' => 'date',
 			),
+			array(
+                'name' => 'Related Article',
+                'desc' => 'This will link to an article',
+                'id' => 'related_article',
+                'type' => 'post',
+                'post_type' => array('work','news-press,post'),
+                'field_type' => 'select_advanced',
+                'placeholder' => 'Select work',
+                'query_args' => array(
+                    'posts_per_page' => - 1,
+                )
+            ),
 
 		)
 
@@ -515,7 +529,31 @@ function abdul_register_meta_boxes( $meta_boxes )
 
 
 
+$meta_boxes[] = array(
+		'title' => 'Work Slider',
+		'pages' => array('Work Slider'),
+		'priority' => 'high',
+		'fields' => array(
+			array(
+                'name' => 'Related Work',
+                'desc' => 'This will link to the work details page of the specific post',
+                'id' => 'related_work',
+                'type' => 'post',
+                'post_type' => 'work',
+                'field_type' => 'select_advanced',
+                'placeholder' => 'Select work',
+                'query_args' => array(
+                    'posts_per_page' => - 1,
+                )
+            ),
+
+		),
+	);
+
+
 	return $meta_boxes;
 }
+
+
 
 add_filter( 'rwmb_meta_boxes', 'abdul_register_meta_boxes' );

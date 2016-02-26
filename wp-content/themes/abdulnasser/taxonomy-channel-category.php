@@ -6,21 +6,21 @@
 
 get_header();
 
-
+$term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
 $categories = get_terms('channel-category');
 query_posts(array('post_type' => 'channel', 'orderby' => 'date', 'order' => 'ASC', 'posts_per_page' => -1));
 
 
 ?>
-
+<div class="channel">
 <div class="cat-mobile clear mobile">
-	<span class="plus-minus">+</span><span class="cat-item active" data-href="<?php echo site_url(); ?>/channel">All</span>
+	<span class="plus-minus">+</span><span class="cat-item active" data-href="<?php echo site_url(); ?>/channel"><?php echo $term->name;?></span>
 </div>
 
 
 <div class="cat-sidebar mobile no-display">
 	<div class="cat-container">
-		<span class="plus-minus">–</span><span class="cat-item active" data-href="<?php echo site_url(); ?>/channel">All</span>
+		<span class="plus-minus">–</span><a class="cat-item active" href="<?php echo site_url(); ?>/channel">All</a>
 	</div>
 	<?php foreach($categories as $cat) if($cat->term_id != 1) { ?>
 		<div class="cat-container">
@@ -89,5 +89,6 @@ query_posts(array('post_type' => 'channel', 'orderby' => 'date', 'order' => 'ASC
 		</div>
 
 	</div>
+</div>
 </div>
 <?php get_footer();	
